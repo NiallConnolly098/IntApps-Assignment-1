@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h1>Niall Connolly's Weather App</h1>
+    
+    <input v-model="city" placeholder="Please Enter City name" class="input" />
+    <button @click="getWeather" class="btn">Get Weather</button>
+
+    
+    <div v-if="forecast.length" class="forecast">
+      <div id="map" style="width: 800px; height: 400px; margin: auto;"></div>
+      <p v-if="umbrella" class="rain-alert">Bring an umbrella, rain is expected!</p>
+      <h3>Pack for {{ weatherType }} weather.</h3>
+      <p></p>
+      <h3>Weather Summary for the Next 3 Days</h3>
+      <div class="table-container">
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Date/Time</th>
+              <th>Temperature (°C)</th>
+              <th>Wind Speed (m/s)</th>
+              <th>Rainfall (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in forecast" :key="item.date">
+              <td>{{ item.date }}</td>
+              <td>{{ item.temp }}°C</td>
+              <td>{{ item.wind }} m/s</td>
+              <td>{{ item.rain }} mm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div v-if="airQualityWarning" class="air-quality-warning">
+      <h3>Air Quality Status</h3>
+      <p>{{ airQualityWarning }}</p>
+    </div>
+
+    <div v-if="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

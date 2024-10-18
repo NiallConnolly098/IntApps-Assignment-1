@@ -1,0 +1,145 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #5b5b5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #e7e7e7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content:center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+h2, h3 {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Input and button styling */
+.input {
+  padding: 10px;
+  width: 50%;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Forecast container */
+.forecast {
+  margin-top: 20px;
+}
+
+/* Packing advice */
+.packing-advice {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+/* Rain alert */
+.rain-alert {
+  color: #d9534f;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Table scroll container */
+/*
+.table-container {
+  max-height: 1hv;
+  overflow-y: auto;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
+*/
+.table-container {
+  margin: auto;
+  width: 750px;
+  height: 200px;
+  overflow-x: hidden;
+  text-align: center;
+}
+/* Summary table */
+.summary-table {
+  background-color: #cbcbcb;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+  box-shadow:0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary-table th, .summary-table td {
+  padding: 10px;
+}
+
+.summary-table thead{
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+}
+
+.summary-table th td {
+  color: #000;
+}
+
+/* Error message */
+.error {
+  color: #d9534f;
+  margin-top: 20px;
+}
+
+/* Air quality warning */
+.air-quality-warning {
+  text-align: center;
+  width: 800px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+}
