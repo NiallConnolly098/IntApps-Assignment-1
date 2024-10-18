@@ -47,12 +47,12 @@ new Vue({
         },
         updateMap(lat, lon){
             this.$nextTick(() => {   
-                this.map = L.map('map').setView([lat,lon],5);
+                this.map = L.map('map').setView([lat,lon],8);
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(this.map);
                 
-                this.map.setView([lat, lon], 5);
+                this.map.setView([lat, lon], 8);
                 this.marker = L.marker([lat, lon]).addTo(this.map);
             });
         },
