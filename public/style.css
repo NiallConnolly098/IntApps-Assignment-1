@@ -145,12 +145,5 @@ h2, h3 {
 }
 
 .footer{
-  position: fixed;
-  bottom: 0;
-  height: fit-content;
-  padding-top: 2px;
-  text-align: center;
-  width: 100%;
-  border-top: 1px solid var(--white);
-  background-color: var(--background);
+  margin: 2px;
 }
