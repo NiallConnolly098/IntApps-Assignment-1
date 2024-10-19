@@ -132,9 +132,7 @@ new Vue({
 
             if(warningMessages.length > 0) {
                 this.airQualityWarning = warningMessages.join(" ");
-            } else {
-                this.airQualityWarning = "The air quality here is good!"
-            }
+            } 
         },
         getHealthRiskMessage(pollutant, level, threshold) {
             const pollutantNames = {

@@ -143,3 +143,14 @@ h2, h3 {
   border: 1px solid #f5c6cb;
   border-radius: 5px;
 }
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: fit-content;
+  padding-top: 2px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid var(--white);
+  background-color: var(--background);
+}
