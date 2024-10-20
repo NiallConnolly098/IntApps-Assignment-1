@@ -45,18 +45,16 @@
       </div>
     </div>
 
-    <p class="footer">Find my code at: <a href="https://github.com/NiallConnolly098/IntApps-Assignment-1">github.com/NiallConnolly098</a></p>
-
     <div v-if="airQualityWarning" class="air-quality-warning">
       <h3>Air Quality Status</h3>
       <p>{{ airQualityWarning }}</p>
     </div>
-
     
-
     <div v-if="error" class="error">
       <p>{{ error }}</p>
     </div>
+    <p class="footer">Find my code at: <a href="https://github.com/NiallConnolly098/IntApps-Assignment-1">github.com/NiallConnolly098</a></p>
+
   </div>
   
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
